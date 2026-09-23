@@ -18,6 +18,12 @@ namespace Tetris2D.UI
         public static readonly Vector4 Amarillo = new(1.00f, 0.85f, 0.20f, 1f);
         public static readonly Vector4 Verde = new(0.25f, 1.00f, 0.55f, 1f);
         public static readonly Vector4 Rojo = new(1.00f, 0.25f, 0.25f, 1f);
+        //colores nuevos de la parte numero 2
+        public static readonly Vector4 Azul = new(0.25f, 0.50f, 1.00f, 1f);
+        public static readonly Vector4 Naranja = new(1.00f, 0.50f, 0.00f, 1f);
+        public static readonly Vector4 Violeta = new(0.75f, 0.25f, 1.00f, 1f);
+        public static readonly Vector4 Rosa = new(1.00f, 0.50f, 0.75f, 1f);
+        public static readonly Vector4 VerdeLima = new(0.50f, 1.00f, 0.25f, 1f);
 
         // Texto y apoyos visuales.
         public static readonly Vector4 Blanco = new(1f, 1f, 1f, 1f);
