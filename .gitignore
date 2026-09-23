@@ -1,0 +1,13 @@
+# Carpeta de configuracion local de Visual Studio (no subir al repositorio)
+.vs/
+
+# Resultados de compilacion (se regeneran con "dotnet build")
+bin/
+obj/
+
+# Archivos de usuario de Visual Studio
+*.user
+
+# Archivos temporales
+*.suo
+*.tmp
