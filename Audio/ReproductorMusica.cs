@@ -224,7 +224,7 @@ namespace Tetris2D.Audio
         {
             string nombreBase = pista switch
             {
-                PistaMusica.Menu => "videoplayback (1)",
+                PistaMusica.Menu => "videoplayback (2)",
                 PistaMusica.JuegoA => "videoplayback (2)",
                 PistaMusica.JuegoB => "videoplayback (1)",
                 PistaMusica.GameOver => "videoplayback",
