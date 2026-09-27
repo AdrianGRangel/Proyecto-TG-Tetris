@@ -231,7 +231,7 @@ namespace Tetris2D.Audio
                 _ => "videoplayback"
             };
 
-            string[] extensiones = { ".m4a", ".wav" };
+            string[] extensiones = {".wav" };
             string[] carpetas = {
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio"),
                 Path.Combine(Directory.GetCurrentDirectory(), "Audio"),
