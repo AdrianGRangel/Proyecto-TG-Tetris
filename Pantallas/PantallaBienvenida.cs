@@ -1,5 +1,6 @@
 using OpenTK.Mathematics;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using Tetris2D.Audio;
 using Tetris2D.Graficos;
 using Tetris2D.UI;
 
@@ -60,6 +61,7 @@ namespace Tetris2D.Pantallas
         {
             base.Cargar();
             _cuadroNombre.Limpiar();     // empezamos con el nombre vacio
+            ReproductorMusica.Reproducir(PistaMusica.Menu, enBucle: true);
         }
 
         public override void Actualizar(float dt, Vector2 raton)
@@ -82,6 +84,12 @@ namespace Tetris2D.Pantallas
         public override void AlTecla(Keys tecla)
         {
             base.AlTecla(tecla);
+            if (tecla == Keys.F2)
+            {
+                ReproductorMusica.AlternarSilencio();
+                return;
+            }
+
             if (!_iniciado)
             {
                 _cuadroNombre.AlTecla(tecla);
@@ -175,8 +183,15 @@ namespace Tetris2D.Pantallas
             _botonIniciar.Y1 = _botonIniciar.Y0 + botonAlto;
             _botonIniciar.Renderizar(alto * 0.042f);
 
+            // --- Indicador de música -----------------------------------------
+            string txtMusica = ReproductorMusica.EsSilenciado ? "MÚSICA: [F2] SILENCIO" : "MÚSICA: [F2] ACTIVA";
+            float mTam = alto * 0.022f;
+            float mAncho = Texto.MedirTexto(txtMusica, mTam);
+            Vector4 mCol = ReproductorMusica.EsSilenciado ? TemaArcade.Rojo : TemaArcade.Verde;
+            Texto.DibujarTexto(txtMusica, ancho - mAncho - ancho * 0.035f, alto * 0.03f, mTam, mCol);
+
             // --- Pie de pantalla ---------------------------------------------
-            string pie = "TETRIS2D v1.0 — base lista para la Fase 2 (tablero)";
+            string pie = "TETRIS2D v1.0 — Graficación por Computadora";
             float pieAlto = alto * 0.018f;
             float pieAncho = Texto.MedirTexto(pie, pieAlto);
             Texto.DibujarTexto(pie, cx - pieAncho * 0.5f, alto - pieAlto * 2.2f, pieAlto, TemaArcade.TextoSuave);

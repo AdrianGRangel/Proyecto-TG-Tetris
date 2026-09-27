@@ -1,14 +1,10 @@
-﻿using OpenTK.Mathematics;
+using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 
 namespace Tetris2D
 {
-    /// <summary>
-    /// Punto de entrada del juego Tetris2D.
-    /// Aqui solo se configuran las opciones de la ventana y se arranca el
-    /// bucle principal de OpenTK (Run). 
-    /// </summary>
+
     internal static class Program
     {
         private static void Main()

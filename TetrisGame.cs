@@ -134,6 +134,7 @@ namespace Tetris2D
 
         protected override void OnUnload()
         {
+            Tetris2D.Audio.ReproductorMusica.Detener();
             _texto.Dispose();
             _cuadros.Dispose();
             _shaders.Dispose();
