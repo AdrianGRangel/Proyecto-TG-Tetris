@@ -69,8 +69,8 @@ namespace Tetris2D.Audio
         private static LoopStream? _loopStream;
         private static WaveStream? _lector;
         private static readonly object _bloqueo = new();
-
-        private static float _volumen = 0.35f;
+        //Con esta variable puedes cambiar el volumen del juego entre lo mayo a lo menor
+        private static float _volumen = 0.03f;
         private static bool _silenciado = false;
         private static PistaMusica? _pistaActual = null;
         private static bool _estaPausado = false;
